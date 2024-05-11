@@ -26,7 +26,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30fbe522-b33a-4656-8c5f-a807efa73aa1" name="Changes" comment="Priority database updates" />
+    <list default="true" id="30fbe522-b33a-4656-8c5f-a807efa73aa1" name="Changes" comment="Error Fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,6 +89,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Dasun Wickramasooriya &lt;32405325+dasunwickr@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="dev" />
@@ -333,7 +338,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716016994182</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Error Fix">
+      <option name="closed" value="true" />
+      <created>1716017225022</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1716017225022</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -359,7 +372,9 @@
     <MESSAGE value="Priority frontend functionality fixed" />
     <MESSAGE value="Priority updates" />
     <MESSAGE value="Priority database updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Priority database updates" />
+    <MESSAGE value="Delete .gitignore" />
+    <MESSAGE value="Error Fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error Fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
