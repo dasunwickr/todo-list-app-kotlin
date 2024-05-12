@@ -1,4 +1,4 @@
-package com.example.tusker
+package com.example.todolistapp
 
 import android.content.Context
 import android.graphics.Paint
@@ -6,7 +6,8 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.example.tusker.databinding.TaskItemCellBinding
+import com.example.todolistapp.TaskItem
+import com.example.todolistapp.databinding.TaskItemCellBinding
 import java.time.format.DateTimeFormatter
 
 class TaskItemViewHolder(

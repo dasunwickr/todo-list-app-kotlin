@@ -1,4 +1,4 @@
-package com.example.tusker
+package com.example.todolistapp
 
 import android.annotation.SuppressLint
 import android.app.TimePickerDialog
@@ -14,8 +14,8 @@ import android.widget.Spinner
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
-import com.example.tusker.databinding.FragmentNewTaskSheetBinding
-import com.example.tusker.databinding.TaskItemCellBinding
+import com.example.todolistapp.databinding.FragmentNewTaskSheetBinding
+import com.example.todolistapp.databinding.TaskItemCellBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import java.time.LocalTime
 

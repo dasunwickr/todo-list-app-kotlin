@@ -1,11 +1,11 @@
-package com.example.tusker
+package com.example.todolistapp
 
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
-import com.example.tusker.databinding.TaskItemCellBinding
+import com.example.todolistapp.databinding.TaskItemCellBinding
 
 class TaskItemAdapter(
     private val taskItems: List<TaskItem>,

@@ -2,11 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="purple">#673AB7</color>
-    <color name="PrimaryLight">#C0E895</color>
-    <color name="PrimaryDark">#096a2e</color>
-    <color name="grey">#434543</color>
-    <color name="low_priority_color">#C0E895</color>
-    <color name="medium_priority_color">#FF9800</color>
-    <color name="high_priority_color">#EC273F</color>
+    <color name="purple">#673AB7</color><color name="PrimaryLight">#FAD0C9</color> <!-- Light peach -->
+    <color name="PrimaryDark">#A52A2A</color> <!-- Dark red -->
+    <color name="grey">#636363</color> <!-- Grey -->
+    <color name="low_priority_color">#FAD0C9</color> <!-- Light peach -->
+    <color name="medium_priority_color">#FFD700</color> <!-- Gold -->
+    <color name="high_priority_color">#FF6347</color> <!-- Tomato -->
+
 </resources>

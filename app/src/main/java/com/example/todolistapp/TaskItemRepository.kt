@@ -1,8 +1,9 @@
 @file:Suppress("Since15")
 
-package com.example.tusker
+package com.example.todolistapp
 
 import androidx.annotation.WorkerThread
+import com.example.todolistapp.TaskItem
 import kotlinx.coroutines.flow.Flow
 
 class TaskItemRepository(private val taskItemDao: TaskItemDao) {

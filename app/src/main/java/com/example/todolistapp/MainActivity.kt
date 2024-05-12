@@ -1,4 +1,4 @@
-package com.example.tusker
+package com.example.todolistapp
 
 import android.os.Build
 import android.os.Bundle
@@ -7,7 +7,7 @@ import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.tusker.databinding.ActivityMainBinding
+import com.example.todolistapp.databinding.ActivityMainBinding
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
 @RequiresApi(Build.VERSION_CODES.O)
