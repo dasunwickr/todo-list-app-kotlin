@@ -1,20 +1,67 @@
-package com.example.todolistapp
+package com.example.tusker
 
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.tusker.databinding.ActivityMainBinding
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
-class MainActivity : AppCompatActivity() {
+@RequiresApi(Build.VERSION_CODES.O)
+class MainActivity : AppCompatActivity(), TaskItemClickListener {
+
+    private lateinit var binding: ActivityMainBinding
+    private val taskViewModel: TaskViewModel by viewModels {
+        TaskItemModelFactory((application as TodoApplication).repository)
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.newTaskButton.setOnClickListener{
+            NewTaskSheet(null).show(supportFragmentManager, "NewTaskTag")
         }
+
+        findViewById<ExtendedFloatingActionButton>(R.id.deleteAllButton).setOnClickListener {
+            // Call the method to delete all task items
+            deleteAllTaskItems()
+        }
+
+        setRecyclerView()
+    }
+
+    private fun setRecyclerView() {
+        val mainActivity = this
+        taskViewModel.taskItems.observe(this) {
+            binding.todoListRecyclerView.apply {
+                layoutManager = LinearLayoutManager(applicationContext)
+                adapter = TaskItemAdapter(it, mainActivity)
+            }
+        }
+    }
+
+    private fun deleteAllTaskItems() {
+        // Implement the logic for deleting all task items
+        // Call the method in your ViewModel to delete all task items
+        taskViewModel.deleteAllTaskItems()
+    }
+
+    override fun editTaskItem(taskItem: TaskItem) {
+        NewTaskSheet(taskItem).show(supportFragmentManager, "EditTaskTag")
+    }
+
+    override fun deleteTaskItem(taskItem: TaskItem) {
+        taskViewModel.deleteTaskItem(taskItem)
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun completeTaskItem(taskItem: TaskItem) {
+        taskViewModel.setCompleted(taskItem)
     }
 }
