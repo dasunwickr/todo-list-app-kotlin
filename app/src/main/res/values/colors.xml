@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple">#673AB7</color><color name="PrimaryLight">#FAD0C9</color> <!-- Light peach -->
+    <color name="PrimaryDark">#A52A2A</color> <!-- Dark red -->
+    <color name="grey">#636363</color> <!-- Grey -->
+    <color name="low_priority_color">#FAD0C9</color> <!-- Light peach -->
+    <color name="medium_priority_color">#FFD700</color> <!-- Gold -->
+    <color name="high_priority_color">#FF6347</color> <!-- Tomato -->
+
+</resources>
