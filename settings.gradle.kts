@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Tusker"
+rootProject.name = "Just Todo"
 include(":app")
  
